@@ -1,0 +1,313 @@
+
+
+body {
+  margin: 0;
+}
+
+nav.scrolls{
+  background:tomato;
+}
+
+nav{
+  position: fixed;
+  color:white;
+  z-index: 3;
+  top:0;
+  left:0;
+  width:100%;
+  height: 45px;
+  transition:0.50s;
+  span{
+    display: inline-block;
+    font-size:30px;
+    padding:10px;
+    padding-top:0;
+    margin-left:30px;
+  }
+  li a{
+    position: relative;
+    &::after{
+      content:"";
+      position: absolute;
+      left:0;
+      bottom:-8px;
+      width:0;
+      height: 3px;
+      background:gray;
+      transition: 0.3s linear;
+    }
+    &:hover::after{
+      width:100%;
+    }
+  }
+}
+header {
+  height: 100vh;
+  background-image: url("../assets/images/homebg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .header-overlay {
+    background: rgba(0, 0, 0, 0.65);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .scroll_down {
+    position: absolute;
+    bottom: 0;
+    left: 49.5%;
+    font-size: 40px;
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+  }
+  .wraper {
+    z-index: 2;
+    color: white;
+    h1 {
+      font-family: ani;
+      margin: 20px;
+    }
+    ul {
+      margin-top: 50px;
+      display: inline-block;
+      li {
+        margin-left: 10px;
+        display: inline-block;
+        a {
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+// Section
+section {
+  padding: 50px;
+  .container-about {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 80px;
+    .about-us-headding {
+      h1 {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+    }
+    .about-us-det {
+      h6 {
+        font-size: 15px;
+        font-weight: 100;
+      }
+      h6 , p {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+    }
+  }
+  .info{
+    text-align:center;
+    padding:0;
+    .grid-container{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+// Portfolio
+
+#portfolio{
+  .portfolio-grid{
+    padding:50px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+} //Gallery
+
+div.gallery-wraper{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap:10px;
+  grid-auto-rows: minmax(130px , auto);
+  grid-template-areas: 
+  "one two three four"
+  "five six seven four"
+  "five six seven eight"
+  "nine ten seven eight"
+  "nine ten seven eight";
+  div.item-1,div.item-2,div.item-3,div.item-4,div.item-5,div.item-6,div.item-7,div.item-8,div.item-9,div.item-10{
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    // min-height: 100px;
+    // width:50px;
+    transition: 0.4s;
+  }
+div.item-1:hover,div.item-2:hover,div.item-3:hover,div.item-4:hover,div.item-5:hover,div.item-6:hover,div.item-7:hover,div.item-8:hover,div.item-9:hover,div.item-10:hover{
+  opacity: 0.6;
+  transform: scale(0.8);
+}
+
+
+
+  div.item-1{
+    background:url("../assets/images/pf11.jpg");
+    grid-area: one;
+  }
+  div.item-2{
+    background:url("../assets/images/pf12.jpg");
+    grid-area: two;
+  }
+  div.item-3{
+    background:url("../assets/images/pf13.jpg");
+    grid-area: three;
+  }
+  div.item-4{
+    background:url("../assets/images/pf14.jpg");
+    grid-area: four;
+  }
+  div.item-5{
+    background:url("../assets/images/pf15.jpg");
+    grid-area: five;
+  }
+  div.item-6{
+    background:url("../assets/images/pf21.jpg");
+    grid-area: six;
+  }
+  div.item-7{
+    background:url("../assets/images/pf22.jpg");
+    grid-area: seven;
+  }
+  div.item-8{
+    background:url("../assets/images/pf31.jpg");
+    grid-area: eight;
+  }
+  div.item-9{
+    background:url("../assets/images/pf32.jpg");
+    grid-area: nine;
+  }
+  div.item-10{
+    background:url("../assets/images/pf11.jpg");
+    grid-area: ten;
+  }
+}
+div#gallery div.gallery-wraper{
+  padding:50px;
+}
+// Our service
+#service-container{
+  div.service-info-container{
+    padding:20px;
+    display: grid;
+    grid-template-columns: 50% 50%; 
+    text-align: center;
+    p{
+      padding:10px;
+      font-size:17px;
+      font-weight: 200;
+    }
+  }
+
+  div.our-services{
+    div.service-one, div.service-two, div.service-three{
+      display: grid;
+      grid-template-columns: 50% 50%;
+      margin-top:50px;
+      div.service-description{
+        padding:100px;
+        h2{
+          font-weight: bolder;
+        }
+      }
+      img{
+        width:100%;
+      }
+    }
+  }
+}
+// Our team
+
+div#our-team{
+  div.our-team-info{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding:60px;
+    p{
+      padding:12px;
+    }
+  }
+
+  div.team-mumber{
+    padding:40px;
+    padding-left:60px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    img{
+      
+      transition:0.4s linear;
+      // &:hover{
+      //   transform: scale(0.9);
+      // } 
+    }
+  }
+}
+
+//Our team image effect
+
+div.image-box{
+  position: relative;
+  overflow: hidden;
+  
+  img{  
+    
+  }
+  div.text-box{
+    position: absolute;
+    top:0;
+    left:-205px;
+    height: 100%;
+    background:tomato;
+    transition: 0.4s;
+    width:200px;
+    h3{
+      padding:8px;
+    }
+    a{
+      text-decoration: none;
+      color:white;
+      font-size:15px;
+      transition: 0.8s;
+      display: block;
+      padding:8px;
+      margin:5px;
+      position: relative;
+      
+      &::after{
+        content: "";
+        position: absolute;
+        bottom:0;
+        left:0;
+        width:0;
+        height: 3px;
+        background: lightcoral;
+        transition: 0.8s;
+      }
+      &:hover::after{
+        width:100%;
+      }
+    }
+  }
+}
+div.image-box:hover div.text-box{
+  left:0%;
+}
+
+// Media querys
+@import "media";

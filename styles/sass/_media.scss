@@ -1,0 +1,92 @@
+@media screen and (max-width:1100px){
+  div#service-container div.our-services div.service-one,
+  div#service-container div.our-services div.service-two,
+  div#service-container div.our-services div.service-three{
+    img{
+      width:400px;
+      height: auto;
+    }
+  }
+
+  div#our-team div.team-mumber{
+    grid-template-columns: 50% 50%;
+    img{
+      margin-top:30px;
+    }
+  }
+}
+
+@media screen and (max-width: 780px){
+
+ section .container-about{
+   grid-template-columns: 100%;
+   padding:20px;
+ }
+ div#portfolio div.portfolio-grid{
+   grid-template-columns: 100%;
+ }
+ div.info div.grid-container{
+   grid-template-columns: 100%;
+ }
+ div.gallery-wraper{
+ grid-template-areas: 
+  "one one two three"
+  "four four five five"
+  "six six seven even"
+  "eight nine ten ten"
+  "eight nine ten ten";
+ } 
+ 
+
+ div#service-container div.service-info-container{
+   grid-template-columns: 100%;
+ }
+
+ div#service-container div.our-services div.service-one,
+ div#service-container div.our-services div.service-two,
+ div#service-container div.our-services div.service-three{
+   grid-template-columns: 100%;
+   img{
+     width:100%;
+     height: auto;
+   }
+ }
+
+ div#our-team div.team-mumber{
+  grid-template-columns: 100%;
+  justify-items: center;
+  img{
+    margin-top:30px;
+  }
+}
+
+div#our-team div.our-team-info{
+  grid-template-columns:100%;
+}
+  
+}
+
+
+@media screen and (max-width:480px){
+
+  div.gallery-wraper{
+    grid-template-areas: 
+     "one one one one"
+     "two two two two"
+     "three three three three"
+     "four four four four"
+     "five five five five"
+     "six six six six"
+     "seven seven seven seven"
+     "eight eight eight eight"
+     "nine nine nine nine"
+     "ten ten ten ten";
+  } 
+  *{
+    padding:0 !important;
+  }
+  a.hamburger{
+    padding:12px !important;
+  }
+}
+
